@@ -8,11 +8,17 @@
 .sidebar {
   /*The element is removed from the normal document flow, and no space is created for the element in the page layout. */
   position: fixed;
-  background-color: orangered;
+  background-color: rgb(2, 85, 85);
   width: 250px;
   height: 100%;
   line-height: 50px;
   left: -250px;
+  transition: left 0.4s ease;
+  color: white;
+}
+
+.sidebar.show {
+  left: 0;
 }
 
 .sidebar .text {
@@ -21,7 +27,7 @@
 }
 
 nav ul {
-  background-color: black;
+  background-color: darkslategray;
   height: 100%;
   width: 100%;
   list-style: none;
@@ -38,6 +44,7 @@ nav ul li a {
   text-decoration: none;
   padding-left: 40px;
   border-left: 3px solid transparent;
+  color: white;
 }
 
 nav ul li a span {
@@ -48,7 +55,7 @@ nav ul li a span {
   transition: transform 0.4s;
 }
 
-nav ul li a:hover span {
+nav ul li a span.rotate {
   transform: translateY(-50%) rotate(-180deg);
 }
 
@@ -77,22 +84,31 @@ nav ul ul li a {
 
 .hamburger {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 36px;
-  height: 36px;
-  background: black;
+  top: 5px;
+  left: 5px;
+  width: 32px;
+  height: 32px;
+  background-color: rgb(2, 85, 85);
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
+  transition: left 0.4s ease;
 }
 
 .hamburger span {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 32px;
   color: white;
 }
 
 .hamburger.click {
-  left: 250px;
+  left: 255px;
+}
+
+.hamburger.click span:before {
+  content: "\f00d";
+}
+
+.main {
+  padding: 20px 60px;
 }
