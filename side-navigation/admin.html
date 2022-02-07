@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/646e4bb2c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="hamburger">
+        <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">綜合管理後台</div>
+        <ul>
+            <li><a href="">媒體庫</a></li>
+            <li>
+                <a href="#" class="dropdown-btn1">網頁管理
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <ul class="dropdown-menu1">
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">最新消息</a></li>
+                    <li><a href="">留言管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-btn2">塔務資料修改
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <ul class="dropdown-menu2">
+                    <li><a href="">法會年度法會別</a></li>
+                    <li><a href="">銷售活動組別</a></li>
+                </ul>
+            </li>
+            <li><a href="">item 001</a></li>
+            <li><a href="">item 002</a></li>
+        </ul>
+    </nav>
+<script>
+    $('.dropdown-btn1').click(function() {
+        $('.dropdown-menu1').toggleClass('show');
+    });
+
+    $('.dropdown-btn2').click(function() {
+        $('.dropdown-menu2').toggleClass('show');
+    });
+
+    $('.hamburger').click(function() {
+        $(this).toggleClass('click');
+    });
+</script>    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="site2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.hoverIntent.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <ul id="nav1">
+          <li><a href="#">Portfolio</a>
+          <ul>
+              <li><a href="#">Web</a></li>
+              <li><a href="#">Print</a></li>
+              <li><a href="#">Other</a></li>
+              <li><a href="#">Print</a></li>
+              <li><a href="#">Other</a></li>
+          </ul>
+          </li>
+          <li><a href="#">About</a>
+            <ul>
+            <li><a href="#">History</a></li>
+              <li><a href="#">Meet The Owners</a></li>
+              <li><a href="#">Awards</a></li>
+          </ul>
+          </li>
+          <li><a href="#">Menu Heading 3</a>
+          <ul>
+            <li><a href="#">Stage1</a></li>
+            <li><a href="#">Stage2</a></li>
+            <li><a href="#">Stage3</a></li>
+            <li><a href="#">Stage4</a></li>
+          </ul>
+          </li>
+      </ul>
+      <div>
+          <script>
+        $(document).ready(function() {
+            $("#nav1 li").hoverIntent(
+              function() {
+                $(this).find('ul').slideDown();
+              },
+              function() {
+                $(this).find('ul').slideUp();
+              });
+          }); 
+          </script>         
+</body>
+</html>
